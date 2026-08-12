@@ -7,13 +7,17 @@ glyph outlines is the whole job, and an outline is a path with points.
 | File | Box | Contents |
 | --- | --- | --- |
 | `mark.svg` | 24 x 24 | the contour in the accent, its six anchor points in the soft tone |
-| `mark-mono.svg` | 24 x 24 | the contour alone, in `currentColor`, single weight |
+| `mark-mono.svg` | 24 x 24 | the contour in `currentColor`, alternate segments at 55% |
 
 Accent `#e8657f`, soft `#f2a0b1`. `mark-mono.svg` takes the colour of its context, which is
 what a README or a sidebar needs.
 
 The points sit on the letter's own corners; the two at the bar and stem junction are left out
 because they crowd the joint without saying anything the others do not.
+
+In the reduced mark every other segment of the contour takes the softer tone, the way the
+barcode bars and the rasterizer grid alternate. The caps are square: with butt caps each
+segment stops short of the corner and nicks it.
 
 The full `ATELIER \ TEXT` lockups do not exist yet: the other packages derive theirs from the
 Atelier wordmark, which is type converted to paths and is not reproduced here.
