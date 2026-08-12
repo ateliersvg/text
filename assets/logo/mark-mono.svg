@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
   <title>Atelier Text</title>
-  <path d="M4.6,4.5 H19.4 V7.9 H17.7 V6.5 H13.1 V17.2 H15.3 V19.4 H8.7 V17.2 H10.9 V6.5 H6.3 V7.9 H4.6 Z" stroke="currentColor" stroke-linejoin="miter"/>
+  <path d="M3.5,3.5 H20.5 V7.6 H13.6 V20.5 H10.4 V7.6 H3.5 Z" stroke="currentColor" stroke-linejoin="miter"/>
 </svg>
