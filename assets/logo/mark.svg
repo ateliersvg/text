@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+  <title>Atelier Text</title>
+  <path d="M1.8,19.4 H8.7 M15.3,19.4 H22.2" stroke="#f2a0b1" stroke-width="1" stroke-linecap="round"/>
+  <path d="M4.6,4.5 H19.4 V7.9 H17.7 V6.5 H13.1 V17.2 H15.3 V19.4 H8.7 V17.2 H10.9 V6.5 H6.3 V7.9 H4.6 Z" stroke="#e8657f" stroke-width="1.4" stroke-linejoin="miter"/>
+</svg>
