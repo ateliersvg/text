@@ -21,7 +21,8 @@ Font parsing and discovery come from `alto/font`; document construction comes fr
 `atelier/svg`. Backed by an extensive test suite and PHPStan at its highest level.
 
 **[Path data](#path-data) · [Whole documents](#whole-documents) · [Choosing a font](#choosing-a-font) ·
-[What it does not do](#what-it-does-not-do) · [Public API](#public-api)**
+[What it does not do](#what-it-does-not-do) · [Public API](#public-api) ·
+[Documentation](#documentation)**
 
 ## Installation
 
@@ -30,7 +31,8 @@ composer require atelier/text
 ```
 
 Requires PHP 8.4 and `ext-mbstring`. WOFF2 files also need a Brotli decoder that `alto/font`
-supports: either `ext-brotli` or the `brotli` command-line binary.
+supports: either `ext-brotli` or the `brotli` command-line binary. Checking which one you have,
+and what happens without either, is in [Installation](docs/installation.md).
 
 ## Quick start
 
@@ -45,13 +47,17 @@ echo '<path d="'.htmlspecialchars($path->d(), \ENT_QUOTES).'" />';
 echo '</svg>';
 ```
 
+Both calls, side by side, are in [Getting started](docs/getting-started.md).
+
 ## Path data
 
 `path()` returns a `TextPath`, whose `d()` is the combined outline of the whole run. That is the
 form to use when the text has to sit inside a drawing you are already building, or be handed to
 something that only speaks path data.
 
-Letter spacing and word spacing are arguments, not post-processing.
+Letter spacing and word spacing are arguments, not post-processing. `baselineY` is the line the
+glyphs sit on rather than the top of the text, which is the one that catches people out. See
+[Path data](docs/outlines.md).
 
 ## Whole documents
 
@@ -66,7 +72,8 @@ echo $svg->toPrettyString();
 ```
 
 Groups carry no `id` by default. Passing `idPrefix` makes them deterministic, which is what an
-animation or a stylesheet needs to address a single glyph.
+animation or a stylesheet needs to address a single glyph. See
+[SVG documents](docs/documents.md).
 
 ## Choosing a font
 
@@ -83,7 +90,8 @@ $font = SvgText::fromFinder($finder, FontQuery::family('Inter')->weight(700));
 $path = $font->path('Hello', size: 72);
 ```
 
-Every format the installed `alto/font` supports is available here.
+Every format the installed `alto/font` supports is available here. A query that matches nothing,
+and how a finder caches what it scans, are in [Loading a font](docs/fonts.md).
 
 ## What it does not do
 
@@ -92,10 +100,13 @@ does not do font fallback, bidirectional text, ligatures, kerning, script shapin
 HarfBuzz-compatible.
 
 That is a deliberate boundary rather than a gap: `Shaping\TextShaperInterface` is the seam where
-a real shaping engine plugs in, and everything downstream consumes its `GlyphRun`.
+a real shaping engine plugs in, and everything downstream consumes its `GlyphRun`. What that
+contract already allows, and what writing a replacement takes, are in
+[Shaping](docs/shaping.md).
 
 A codepoint the font has no glyph for throws `MissingGlyphException`. A size that is not finite
-and positive, or a non-finite coordinate, throws `InvalidArgumentException`.
+and positive, or a non-finite coordinate, throws `InvalidArgumentException`. Both, and what
+`alto/font` throws instead when a file will not load, are in [Errors](docs/errors.md).
 
 ## Public API
 
@@ -117,6 +128,19 @@ php examples/woff2-demo.php
 ```
 
 Writes `examples/output/woff2/index.html` from the bundled open-source Inter fixture.
+
+## Documentation
+
+- [Installation](docs/installation.md): the requirements, and checking a Brotli decoder.
+- [Getting started](docs/getting-started.md): the two calls, and which one to reach for.
+- [Loading a font](docs/fonts.md): a path, a finder, and a query that matches nothing.
+- [Path data](docs/outlines.md): placement, spacing, and what a `TextPath` carries.
+- [SVG documents](docs/documents.md): glyph groups, deterministic ids, and composing.
+- [Shaping](docs/shaping.md): what the mapper does, what it will not, and the seam.
+- [Errors](docs/errors.md): every exception, and which layer throws it.
+
+The full documentation is published at
+[ateliersvg.com/text](https://ateliersvg.com/text/).
 
 ## Contributing
 
