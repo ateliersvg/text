@@ -4,9 +4,11 @@
 
 <p align="center">
   <img alt="PHP Version" src="https://img.shields.io/badge/PHP-8.4%2B-e8657f?labelColor=14141c">
+  <img alt="Tests" src="https://img.shields.io/github/actions/workflow/status/ateliersvg/text/CI.yml?branch=main&label=Tests&labelColor=14141c&color=e8657f">
   <img alt="PHPUnit" src="https://img.shields.io/badge/PHPUnit-13-e8657f?labelColor=14141c">
   <img alt="PHPStan" src="https://img.shields.io/badge/PHPStan-max-e8657f?labelColor=14141c">
-  <img alt="License" src="https://img.shields.io/badge/License-MIT-e8657f?labelColor=14141c">
+  <img alt="Stable" src="https://img.shields.io/github/v/release/ateliersvg/text?label=Stable&labelColor=14141c&color=e8657f">
+  <img alt="License" src="https://img.shields.io/github/license/ateliersvg/text?label=License&labelColor=14141c&color=e8657f">
 </p>
 
 Text drawn as paths owes nothing to the fonts installed on the machine that opens it. This
