@@ -11,7 +11,7 @@ composer require atelier/text
 
 | Requirement | Why |
 |---|---|
-| PHP 8.4 or later | one version ahead of the rest of Atelier |
+| PHP 8.4 or later | the minimum runtime supported by this package |
 | `ext-mbstring` | splitting text into codepoints |
 | `alto/font` | parsing font files and reading glyph outlines |
 | `atelier/svg` | building the document `svg()` returns |
