@@ -3,7 +3,7 @@
     "description": "Map Unicode text to positioned font glyphs, vector outlines, and SVG documents using alto/font and atelier/svg.",
     "type": "library",
     "license": "MIT",
-    "homepage": "https://github.com/ateliersvg/text",
+    "homepage": "https://ateliersvg.com/text/",
     "keywords": [
         "font",
         "glyph",
@@ -23,7 +23,8 @@
     "authors": [
         {
             "name": "Simon André",
-            "email": "smn.andre@gmail.com"
+            "email": "smn.andre@gmail.com",
+            "homepage": "https://smnandre.dev"
         }
     ],
     "minimum-stability": "stable",
@@ -53,7 +54,6 @@
         "sort-packages": true
     },
     "scripts": {
-        "coverage": "vendor/bin/phpunit --coverage-text",
         "cs": "vendor/bin/php-cs-fixer fix --dry-run --diff --sequential",
         "cs:fix": "vendor/bin/php-cs-fixer fix --sequential",
         "qa": [
@@ -61,7 +61,6 @@
             "@sa",
             "@test"
         ],
-        "rector": "vendor/bin/rector process --dry-run",
         "sa": "vendor/bin/phpstan analyse --memory-limit=-1",
         "test": "vendor/bin/phpunit"
     }

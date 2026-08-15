@@ -4,14 +4,15 @@ order: 60
 # Shaping
 
 Shaping is the step between a string and a set of positioned glyphs: which
-glyph each character maps to, and where each one sits. This package ships a
-deliberately small implementation of it, and a seam where a real one goes.
+glyph each character maps to, and where each one sits. This package provides a
+deliberately limited mapper and an interface for replacing it with a full
+shaping engine.
 
 ## What the built-in mapper does
 
 One direct `cmap` lookup per Unicode codepoint, producing a left-to-right run.
-Each glyph gets its advance from the font's metrics, plus whatever
-`letterSpacing` and `wordSpacing` you asked for.
+Each glyph gets its advance from the font's metrics, plus the configured
+`letterSpacing` and `wordSpacing`.
 
 That is the whole algorithm. It is enough for a headline, a chart label, a
 watermark, or a social card in a Latin script, which is what the package was
@@ -27,9 +28,9 @@ built for.
 | kerning | reading `GPOS` or `kern` |
 | script shaping | per-script rules for Arabic, Devanagari, and others |
 
-None of these is a bug to be fixed later in this class. Each is a body of work
-that HarfBuzz exists to do, and pretending otherwise would produce text that
-looks right in English and wrong everywhere else.
+Complex scripts, bidirectional text, ligatures, kerning, and font fallback
+require a full shaping engine such as HarfBuzz. The built-in mapper keeps its
+scope explicit instead of approximating those behaviors.
 
 A codepoint the font has no glyph for throws
 [`MissingGlyphException`](errors.md) rather than falling back, because falling
@@ -78,8 +79,8 @@ a ligature is one glyph from two characters, so it has one cluster and no single
 codepoint. The built-in mapper never produces that case, but the contract
 already allows it.
 
-`TextDirection::RightToLeft` exists in the enum for the same reason. Nothing in
-the package emits it yet.
+`TextDirection::RightToLeft` is available to custom shapers. The built-in mapper
+returns `TextDirection::LeftToRight`.
 
 ## Replacing the mapper
 

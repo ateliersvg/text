@@ -146,6 +146,11 @@ The full documentation is published at
 
 ## Contributing
 
+Contributions are welcome. Visit the [project on GitHub](https://github.com/ateliersvg/text)
+to [report a bug](https://github.com/ateliersvg/text/issues/new),
+[suggest a feature](https://github.com/ateliersvg/text/issues/new), or
+[open a pull request](https://github.com/ateliersvg/text/pulls).
+
 Before submitting code, run:
 
 ```bash
@@ -158,8 +163,6 @@ Changes to public behaviour need a test and a documentation update.
 
 Bug reports, security disclosures, and contribution guidelines are collected at
 [ateliersvg.com/support](https://ateliersvg.com/support/).
-
-Atelier is maintained by Simon André.
 
 ## License
 

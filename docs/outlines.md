@@ -25,7 +25,7 @@ $path->isEmpty();       // false
 | Member | Type | What it is |
 |---|---|---|
 | `d()` | `string` | every glyph's contours, concatenated, in one `d` attribute |
-| `$advanceWidth` | `float` | how far the run advances, including any spacing you asked for |
+| `$advanceWidth` | `float` | how far the run advances, including configured spacing |
 | `isEmpty()` | `bool` | true when the text produced no glyphs, as an empty string does |
 
 `$advanceWidth` is the value to use when you lay several runs out yourself: it
