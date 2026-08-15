@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
-  <title>Atelier Text</title>
-  <path d="M3.5,3.5 H20.5 M20.5,7.6 H13.6 M13.6,20.5 H10.4 M10.4,7.6 H3.5" stroke="currentColor" stroke-linecap="square"/>
-  <path d="M20.5,3.5 V7.6 M13.6,7.6 V20.5 M10.4,20.5 V7.6 M3.5,7.6 V3.5" stroke="currentColor" stroke-linecap="square" opacity="0.55"/>
-</svg>
