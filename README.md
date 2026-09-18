@@ -1,13 +1,16 @@
-<h1 align="center">Atelier Text</h1>
+<h1 align="center">
+  <img src=".github/atelier-text.svg"
+       alt="Atelier Text">
+</h1>
 
 <p align="center">Turn Unicode text into positioned glyphs, vector outlines, and SVG, in PHP.</p>
 
 <p align="center">
   <img alt="PHP Version" src="https://img.shields.io/badge/PHP-8.4%2B-e8657f?labelColor=14141c">
+  <img alt="Version" src="https://img.shields.io/packagist/v/atelier/text?label=Version&labelColor=14141c&color=e8657f">
   <img alt="Tests" src="https://img.shields.io/github/actions/workflow/status/ateliersvg/text/CI.yml?branch=main&label=Tests&labelColor=14141c&color=e8657f">
   <img alt="PHPUnit" src="https://img.shields.io/badge/PHPUnit-13-e8657f?labelColor=14141c">
   <img alt="PHPStan" src="https://img.shields.io/badge/PHPStan-max-e8657f?labelColor=14141c">
-  <img alt="Stable" src="https://img.shields.io/github/v/release/ateliersvg/text?label=Stable&labelColor=14141c&color=e8657f">
   <img alt="License" src="https://img.shields.io/github/license/ateliersvg/text?label=License&labelColor=14141c&color=e8657f">
 </p>
 
